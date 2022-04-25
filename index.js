@@ -16,6 +16,8 @@ dbConnection();
 //Rutas
 app.use('/api/provincias', require('./routes/provincias.route'));
 
-app.listen(process.env.PORT, () => {
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
 	console.log('Servidor corriendo en el puerto ' + process.env.PORT);
 });
